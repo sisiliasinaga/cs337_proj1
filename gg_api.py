@@ -258,7 +258,7 @@ def get_nominees(year):
             nominees[award] = top_4
             # nominees[award] = sorted(possible_nominees, key=possible_nominees.get, reverse=True)[:4]
 
-    print(nominees)
+    # print(nominees)
 
     return nominees
 
@@ -407,7 +407,7 @@ def get_presenters(year):
             presenter_tweets.append(tweet_text_words)
 
     for award in official_awards:
-        print(award)
+        # print(award)
         presenters[award] = []
         award_no_punct = award
         for char in string.punctuation:
@@ -445,7 +445,7 @@ def get_presenters(year):
                     ngrams.append(b)
 
         most_freq = nltk.FreqDist(ngrams).most_common(10)
-        print(most_freq)
+        # print(most_freq)
         if len(most_freq) == 1:
             presenter = list(most_freq[0][0])
             # print(presenter)
@@ -492,7 +492,7 @@ def get_presenters(year):
             # print(presenter1_results[0]['name'])
             # print(presenter2_results[0]['name'])
 
-    print(presenters)
+    # print(presenters)
     return presenters
 
 def get_sentiments(year):
@@ -546,7 +546,7 @@ def get_sentiments(year):
                 sentiment = analyzer.polarity_scores(text)
                 names[n] += sentiment['compound']
     best = sorted(names, key=names.get, reverse=True)[:5]
-    print(best)
+    # print(best)
     return best
 
 def get_worst_dressed(year):
@@ -592,7 +592,7 @@ def get_worst_dressed(year):
                 names[person] = 0
 
     worst = sorted(names, key=names.get, reverse=True)[:15]
-    print(worst)
+    # print(worst)
     return worst
 
 def pre_ceremony():
