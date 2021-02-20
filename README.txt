@@ -15,7 +15,7 @@ from difflib import SequenceMatcher
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-Bonus return features of our project include best dressed and worst dressed. 
+Bonus return features of our project include best dressed and worst dressed. Running the main() function calls each of the individual functions, prints out the results in the console in a human readable format, and puts the results into two separate JSON files (pred2013.json and pred2015.json).
 
 Address for github repository: https://github.com/yuiichiiros/cs337_proj1
 
